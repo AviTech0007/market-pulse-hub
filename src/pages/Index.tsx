@@ -37,7 +37,7 @@ const Index = () => {
           <div className="space-y-6">
             {/* Stock Overview Section */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <StockCard stock={stockData!} loading={isLoading} />
+              <StockCard stock={stockData} loading={isLoading} />
               <StockChart
                 data={stockData?.chartData || []}
                 symbol={selectedSymbol}
