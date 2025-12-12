@@ -4,14 +4,12 @@ import { StockData, formatPrice, formatLargeNumber, formatVolume } from '@/lib/a
 import { cn } from '@/lib/utils';
 
 interface StockCardProps {
-  stock: StockData;
+  stock?: StockData;
   loading?: boolean;
 }
 
 export function StockCard({ stock, loading }: StockCardProps) {
-  const isPositive = stock.change >= 0;
-
-  if (loading) {
+  if (loading || !stock) {
     return (
       <Card className="glass animate-pulse">
         <CardHeader className="pb-2">
@@ -28,6 +26,9 @@ export function StockCard({ stock, loading }: StockCardProps) {
       </Card>
     );
   }
+
+  const isPositive = stock.change >= 0;
+
 
   return (
     <Card className="glass overflow-hidden">
