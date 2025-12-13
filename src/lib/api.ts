@@ -1,6 +1,4 @@
-// Configure your backend URL in .env file: VITE_API_BASE_URL=https://marketpullse-ai21.onrender.com
-const API_BASE_URL = ((import.meta as any).env?.VITE_API_BASE_URL) || 'https://marketpullse-ai21.onrender.com';
-
+const API_BASE_URL = ((import.meta as any).env?.VITE_API_BASE_URL) || 'https://marketpullse-ai30.onrender.com';
 export interface StockData {
   symbol: string;
   name: string;
