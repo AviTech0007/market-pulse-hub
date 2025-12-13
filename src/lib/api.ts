@@ -1,4 +1,4 @@
-const API_BASE_URL = ((import.meta as any).env?.VITE_API_BASE_URL) || 'https://marketpullse-ai-9999.onrender.com';
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL) || 'https://marketpullse-ai-9999.onrender.com';
 export interface StockData {
   symbol: string;
   name: string;
